@@ -1,0 +1,581 @@
+@import "colors";
+@import "typography";
+
+
+/* RESET */
+
+
+body {
+    @include myfont;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+
+figure {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* -------HEADER------ */
+
+header {
+    max-width: 100%;
+    padding: 40px;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    li {
+        @include nav-home;
+        padding: 15px;
+        list-style-type: none;
+        }
+        
+     a {
+        text-decoration: none;
+        list-style-type: none;
+        color: inherit;
+        }
+}
+
+header li:hover {
+    color: $color-btn-hover;
+    text-decoration: underline;
+}
+
+
+.memoji {
+    position: absolute;
+    height: 80px;
+    left: 25px;
+    top: 10px;
+    transition: transform .7s ease-in-out;
+    
+    &:hover {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/* ------HOMEPAGE------ */
+
+.home-wrapper {
+    
+    .intro {
+        margin: auto;
+        padding: 24px;
+        position: absolute;
+        top: 100px;
+        left: 24px;
+        text-align: left;
+        max-width: 80 vw;
+        @include home-about;
+    }
+    
+    .talk {
+        padding-top: 50px;
+        @include home-talk;
+    }
+    
+    a {
+        text-decoration: underline;
+                color: inherit;
+    }
+}
+
+.bold-text {
+    font-weight: 100;
+}
+
+.bg-gradient {
+    background-image: linear-gradient(90deg, rgba(25, 211, 218, 1) 0%, rgba(238, 255, 21, 1) 50%, rgba(217, 25, 255, 1) 100%);
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+}
+
+.dogs-animated {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    animation-name: dogs;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes dogs {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+
+    5% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+
+.white-bg {
+    background-color: white;
+    margin-top: 400px;
+    padding: 20px;
+}
+
+
+
+
+
+/* ------FOOTER------ */
+
+footer {
+
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-top: 510px;
+    }
+
+        li {
+            @include footer;
+            font-size: 14px;
+            padding: 15px;
+            list-style-type: none;
+        }
+
+            a {
+                text-decoration: none;
+                list-style-type: none;
+                color: inherit;
+            }
+            
+}
+
+footer li:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    position: absolute;
+    top: 90%;
+    left: 3%;
+    color: $color-txt-footer;
+}
+
+
+
+
+
+
+/* ------PÁGINA ABOUT------ */
+
+
+.container-about {
+    display: grid;
+}
+
+.title-about {
+    padding: 0px 40px;
+    margin: 0;
+}
+
+.my_description {
+    @include about;
+    max-width: 600px;
+    margin: 0;
+    padding: 60px 40px;
+
+    li {
+        list-style-type: none;
+    }
+}
+
+.other-info {
+    padding: 54px 0;
+}
+
+.foto-zanet {
+    max-width: 300px;
+    margin: auto;
+    padding-bottom: 50px;
+
+}
+
+
+
+
+
+/* ------PÁGINA SELECTED------- */
+
+.selected-title {
+    @include selected-title;
+    padding: 60px 50px 30px 20px;
+
+}
+
+.projects-list {
+    list-style-type: none;
+    padding: 20px;
+
+    a {
+        text-decoration: none;
+        color: $color-main;
+        font-weight: 500;
+    
+        &:hover {
+            text-decoration: none;
+            color: $color-btn-hover;
+        }
+    }
+}
+
+.projects-list-img {
+    width: 100%;
+    margin-left: 11.5%;
+
+}
+
+
+
+
+
+/* -------PÁGINA BOBBLE+SPOTIFY-------- */
+
+article {
+    padding: 0;
+    margin: auto;
+    @include paragraph;
+
+    figure {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.container-project {
+    padding: 30px;
+    margin-top: 30px;
+
+    h2 {
+        @include title-project;
+        margin-bottom: 20px;
+    }
+        p {
+            margin-bottom: 20px;
+        }
+    
+}
+
+figcaption {
+    font-size: 13px;
+    padding-bottom: 60px;
+}
+
+
+.unordered-takeaways {
+    padding: 0;
+
+    .list-takeaways {
+        list-style: none;
+    }
+}
+
+.project-page-principal-img {
+    padding-top: 30px;
+
+}
+
+.project-page-img {
+    max-width: 80vw;
+    padding-top: 60px;
+    margin: 0 auto 0 auto;
+}
+
+.btn-back {
+    @include btn-back;
+    padding: 50px;
+    text-decoration: underline;
+
+    &:hover {
+        color: $color-btn-hover;
+    }
+}
+
+.full-work-link-bobble {
+    text-decoration: underline;
+    color: $color-title-bobble;
+
+    &:hover {
+        text-decoration: none;
+        color: $color-btn-hover;
+    }
+}
+
+.full-work-link-spotify {
+    text-decoration: underline;
+    color: $color-title-spotify;
+
+    &:hover {
+        text-decoration: none;
+        color: $color-btn-hover;
+    }
+}
+
+
+
+
+
+/*  ----------PÁGINA CONTACTS----------    */
+
+.my-contacts {
+    padding: 60px 100px 200px 50px;
+}
+
+.conversation {
+    
+    h1 {
+        @include selected-title;
+    }
+
+    p {
+        padding: 40px 0 40px 0;
+    }
+    
+    .mail {
+            text-decoration: underline;
+            color: $color-main;
+
+            &:hover {
+                text-decoration: none;
+                color: $color-btn-hover;
+            }
+    }
+
+}
+
+.social-media {
+   
+    h2 {
+        @include selected-title;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        padding: 40px 0 40px 0;
+    }
+}
+
+.link-social-media {
+    
+    list-style-type: none;
+    margin: 0;
+    padding-bottom: 19px;
+
+    a {
+        text-decoration: underline;
+        color: $color-main;
+
+        &:hover {
+            text-decoration: none;
+            color: $color-btn-hover;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*              ----------MEDIA QUERIES----------              */
+
+
+@media only screen and (min-width: 1024px) {
+
+
+    /* FOOTER */
+
+    footer {
+        
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 75px;
+        }
+            li {
+                font-size: 16px;
+            }
+
+    }
+
+
+
+
+    /* HOME INTRO */
+
+
+    .home-wrapper {
+        .intro {
+            font-size: 40px;
+            line-height: 48px;
+            max-width: 920px;
+            padding: auto;
+        }
+    }
+
+    @keyframes dogs {
+        0% {
+            left: 0px;
+            top: 0px;
+        }
+
+        25% {
+            left: 0px;
+            top: 450px;
+        }
+
+        50% {
+            left: 57%;
+            top: 450px;
+        }
+
+        75% {
+            left: 57%;
+            top: 0px;
+        }
+
+        100% {
+            left: 0px;
+            top: 0px;
+        }
+    }
+
+    .white-bg {
+        background-color: white;
+        margin-top: 700px;
+        margin-bottom: 50px;
+    }
+
+    .memoji {
+        height: 100px;
+    }
+
+
+
+
+    /* ABOUT PAGE */
+
+    .container-about {
+        display: flex;
+        margin: 120px 140px 180px 140px;
+    }
+
+    .my_description {
+        max-width: 700px;
+        padding: 0;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+
+
+
+    /* SELECTED PROJECTS PAGE */
+
+    .selected-title {
+        padding-left: 170px;
+        font-size: 40px;
+        display:flex;
+
+    }
+
+    .project-nav {
+        padding-left: 150px;
+
+        ul {
+            padding: 100px;
+            display: none;
+        }
+    }
+
+
+    .projects-list-img {
+        max-width: 300px;
+    }
+
+
+
+
+    /* PROJECTS  PAGE */
+
+    .container-project {
+        padding-left: 260px;
+        padding-right: 260px;
+        padding-top: 60px;
+        max-width: 920px;
+        margin: auto;
+
+        h2 {
+            font-size: 24px;
+        }
+    }
+
+    .project-page-img {
+        max-width: 920px;
+    }
+
+
+
+
+    /* CONTACTS  PAGE */
+
+    .my-contacts {
+        display: flex;
+        margin: auto;
+        padding-left: 170px;
+
+        .conversation {
+            padding: 100px 130px 10px 200px;
+
+            h1 {
+                max-width: 300px;
+            }
+        }
+
+        .social-media {
+            padding: 100px 130px 10px 200px;
+
+            h2 {
+                max-width: 300px;
+            }
+        }
+    }
+
+}

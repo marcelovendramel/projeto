@@ -1,0 +1,13 @@
+
+    <nav>
+        <!-- <h1><a href="{{ site.baseurl }}/" title="link to my homepage">Ana Gouveia</a></h1> !-->
+
+        <a href="{{ site.baseurl }}/"><img class="memoji" src="{{ "assets/images/baffo.png" | relative_url }}" alt="me old" title="link to my homepage"></a>
+        <ul>
+            {% for navigation in site.data.nav-geral.docs %}
+            <li>
+                <a href="{{ site.baseurl }}/{{ navigation.url }}" title="Go to {{ navigation.title }}">{{ navigation.title }}</a>
+            </li> 
+            {% endfor %}
+        </ul>
+    </nav> 

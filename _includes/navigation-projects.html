@@ -1,0 +1,15 @@
+<div class="project-nav"></div>
+    <nav>
+        <ul>
+        {% for project in site.projects %}
+            <li>
+                <figure>
+                    <a href="{{ site.baseurl }}/projects/{{project.slug}}" title="{{ project.link-title }}">
+                        <img class="projects-list-img" src="assets/images/{{ project.img-thumbnail }}" alt="{{ project.image-alt }}">
+                    </a>
+                </figure>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</div>

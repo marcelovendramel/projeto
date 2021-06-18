@@ -1,0 +1,69 @@
+
+@import "colors";
+
+@mixin myfont {
+    font-family: "cursive", cursive,;
+    color: $color-main;
+    margin: 0;
+}
+
+@mixin nav-home {
+    @include myfont;
+    font-weight: 400;
+    font-size: 86px;
+}
+
+@mixin home-about {
+    @include myfont;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+@mixin home-talk {
+    @include myfont;
+    font-weight: 400;
+    font-size: 24px;   
+}
+
+@mixin paragraph {
+    @include myfont;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+@mixin about {
+    @include myfont;
+    color: $color-about;
+    font-weight: 400px;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+@mixin title-project {
+    @include myfont;
+    font-weight: 500px;
+    color: $color-title-spotify;
+}
+
+@mixin selected-title {
+    @include myfont;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+@mixin btn-back {
+    @include myfont;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+@mixin footer {
+    @include myfont;
+    color: $color-txt-footer;
+}
+
+    
